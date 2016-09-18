@@ -4,7 +4,7 @@ and the commission paid to an individual sales agent.
 The user is asked for the last name of the seller and the
 sales price.
 
-Input is read from the file Realtor11.inp
+Input is read from the file Realtor11.txt
 Output is printed to the file Realtor11.out
 
 

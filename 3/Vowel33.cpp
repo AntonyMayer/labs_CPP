@@ -16,24 +16,28 @@ using namespace std;
 
 int main()
 {
-     string input_string;
+     string repeat, input_string;
+
      int a_count, e_count, i_count, o_count, u_count, pos_count;
-
-     a_count = e_count = i_count = o_count = u_count = pos_count = 0;
-
+          
      cout << "\nThis program asks the user for a sentence,\n"
           << "searches the sentence for all vowels,\n"
           << "and displays the number of times each\n"
-          << "vowel appears in the sentence.\n"
-          << "\nEnter the sentence to search: " << endl;
+          << "vowel appears in the sentence.\n" << endl;
 
-     getline(cin, input_string);
+     do {
+          
+          a_count = e_count = i_count = o_count = u_count = pos_count = 0;
 
-     cout << "\nThe sentence has " <<  input_string.length()
-          << " characters.\n" << endl;
+          cout << "\nEnter the sentence to search: " << endl;
+          
+          getline(cin, input_string);
 
-     while (pos_count <  input_string.length()) {
-          switch (input_string[pos_count]) {
+          cout << "\nThe sentence has " <<  input_string.length()
+               << " characters.\n" << endl;
+
+          while (pos_count <  input_string.length()) {
+               switch (input_string[pos_count]) {
                case 'a':
                case 'A':
                     a_count++;
@@ -54,16 +58,22 @@ int main()
                case 'U':
                     u_count++;
                     break;
+               }
+               pos_count++;
           }
-          pos_count++;
-     }
 
-     cout << "There are\n" 
-          << a_count << " a's,\n"
-          << e_count << " e's,\n"
-          << i_count << " i's,\n"
-          << u_count << " u's.\n" 
-          << endl;
+          cout << "There are\n"
+               << a_count << " a's,\n"
+               << e_count << " e's,\n"
+               << i_count << " i's,\n"
+               << u_count << " u's.\n"
+               << endl;
+
+          cout << "Would you like to search another sentence? (y or n)" << endl;
+          
+          getline (cin, repeat);
+
+     } while (repeat == "y");
 
      return 0;
 }

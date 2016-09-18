@@ -4,7 +4,7 @@
 ****************************************************************************************
 * Statement: Determine owner, selling cost and commission for house sale
 * Specifications:
-* Input - owner (string) and selling price (double) << Realtor11.inp
+* Input - owner (string) and selling price (double) << Realtor11.txt
 * Output- owner (string), selling cost (double) and commission (double) >> Realtor11.out
 ****************************************************************************************/
 #include <fstream>
@@ -20,7 +20,7 @@ int main()
 	ifstream fin;
 	ofstream fout;
 
-	fin.open("Realtor11.inp");
+	fin.open("Realtor11.txt");
 	fout.open("Realtor11.out");
 
 	fin >> seller >> price;
@@ -28,7 +28,7 @@ int main()
 	     << "and the commission paid to an individual sales agent.\n\n";
 	fout << "The user is asked for the last name of the seller and the\n"
 	     << "sales price.\n\n";
-	fout << "Input is read from the file Realtor11.inp\n";
+	fout << "Input is read from the file Realtor11.txt\n";
 	fout << "Output is printed to the file Realtor11.out\n\n";
 
 	cost = 0.06 * price;
@@ -49,6 +49,6 @@ int main()
 	fin.close();
 	fout.close();
 
-	cout << "\nInput is read from the file Realtor11.inp\n"
+	cout << "\nInput is read from the file Realtor11.txt\n"
 	     << "Output is printed to the file Realtor11.out\n" << endl;
 }
